@@ -1,0 +1,58 @@
+<div class="min-h-screen flex items-center justify-center">
+  <div class="flex w-[100vh] h-[65vh] bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="w-1/2 h-full bg-green-200 flex items-center justify-center">
+      <img src="imglogin.jpg" class="w-[120%] h-[105%] object-cover" alt="" />
+    </div>
+
+    <section class="w-1/2 flex flex-col gap-8 p-8 justify-center items-center">
+      <h2 class="text-2xl font-bold flex justify-center">PACK TRACER LOGIN</h2>
+      <div class="flex flex-col">
+        <form action="" class="flex flex-col gap-2">
+          <div class="flex flex-col">
+            <label for="usuario">Usuário</label>
+            <input
+              #usuarioInput
+              id="usuario"
+              name="usuario"
+              type="text"
+              placeholder="nome.sobrenome"
+              class="w-full rounded-full border border-gray-300 px-4 py-2 shadow-md"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="password">Senha</label>
+            <input
+              #passwordInput
+              id="password"
+              name="password"
+              type="password"
+              placeholder="password"
+              class="w-full rounded-full border border-gray-300 px-4 py-2 shadow-md"
+            />
+          </div>
+
+          <div class="flex flex-row justify-between pb-2 text-sm">
+            <p class="text-green-500"><a href="">Esqueceu sua senha?</a></p>
+          </div>
+        </form>
+
+        <button
+          (click)="Login(usuarioInput.value, passwordInput.value)"
+          type="submit"
+          class="bg-green-200 font-bold text-black h-9 rounded-full px-6 shadow-md flex justify-center items-center cursor-pointer"
+        >
+          Entrar
+        </button>
+
+        <p class="pt-2">
+          <span class="text-sm font-light text-gray-600"> Não tem uma Conta? </span>
+
+          <a href="register" class="underline text-sm font-semibold text-green-600"
+            >Registre-se aqui</a
+          >
+        </p>
+      </div>
+    </section>
+  </div>
+</div>

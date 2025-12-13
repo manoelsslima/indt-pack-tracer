@@ -1,0 +1,73 @@
+<div class="min-h-screen flex items-center justify-center">
+  <div class="flex w-[100vh] h-[65vh] bg-white rounded-xl shadow-lg">
+    <section class="w-1/2 flex flex-col gap-8 p-8 justify-center items-center">
+      <h2 class="text-2sm font-bold flex justify-center">PACK TRACER - CADASTRO USUÁRIO</h2>
+      <div class="flex flex-col justify-center align-center">
+        <form action="" class="flex flex-col gap-2 justify-center align-center">
+          <div class="flex flex-col">
+            <label for="usuario">Usuário</label>
+            <input
+              #usuarioInput
+              id="usuario"
+              name="usuario"
+              type="text"
+              placeholder="nome.sobrenome"
+              class="w-full rounded-full border border-gray-300 px-4 py-2 shadow-md"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="nome">Nome</label>
+            <input
+              #nomeInput
+              id="nome"
+              name="nome"
+              type="text"
+              placeholder="Nome Completo"
+              class="w-full rounded-full border border-gray-300 px-4 py-2 shadow-md"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="password">Senha</label>
+            <input
+              #passwordInput
+              id="password"
+              name="password"
+              type="password"
+              placeholder="password"
+              class="w-full rounded-full border border-gray-300 px-4 py-2 shadow-md"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="passwordconfirmacao">Confirmação Senha</label>
+            <input
+              #passwordConfirmacaoInput
+              id="passwordConfirmacao"
+              name="passwordConfirmacao"
+              type="password"
+              placeholder="password"
+              class="w-full rounded-full border border-gray-300 px-4 py-2 shadow-md"
+            />
+          </div>
+        </form>
+        <div class="justify-between w-[200px] flex gap-4">
+          <button
+            (click)="salvar(usuarioInput.value, nomeInput.value, passwordInput.value, passwordConfirmacaoInput.value)"
+            type="submit"
+            class="bg-green-200 my-5 font-bold text-black h-9 rounded-full px-6 shadow-md flex justify-center items-center cursor-pointer"
+          >
+            Salvar
+          </button>
+          <button
+            (click)="cancelar()"
+            type="submit"
+            class="bg-red-200 my-5 font-bold text-black h-9 rounded-full px-6 shadow-md flex justify-center items-center cursor-pointer"
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
