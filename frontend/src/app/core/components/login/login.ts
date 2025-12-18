@@ -12,6 +12,7 @@ export class Login {
  private rota = inject(Router);
  Login(username: string, password: string) {
     const user = this.servico.Login(username, password);
+    console.log('Login user:', user);
     if (user!=null) {
           this.rota.navigate(['home']);
     } else {
