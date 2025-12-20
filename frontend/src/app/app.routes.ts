@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 import { Login } from './core/components/login/login';
-import { Home } from './pages/home/home/home';
+import { Home } from './pages/home/home';
 import { Register } from './core/components/register/register/register';
 import { Admin } from './pages/home/admin/admin/admin';
 import { Supervisor } from './pages/home/supervisor/supervisor/supervisor';
-import { Operador } from './pages/home/home/operador/operador/operador';
+import { Operador } from './pages/home/operador/operador/operador';
 import { loginGuard } from './guard/login.guard';
 import { authGuard } from './guard/auth.guard';
 

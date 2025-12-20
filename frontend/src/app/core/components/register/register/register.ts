@@ -24,7 +24,7 @@ export class Register {
       return;
     }
     //fixo cadastrando apenas administradores  
-    this.servico.addUser( { id: usuario, grupo: 1, name: nome, password: senha1 } );      
+    this.servico.addUser( { id: usuario, grupo: 1, name: nome, password: senha1, setorId: 0 } );      
     this.router.navigate(['']);
   }
 }
