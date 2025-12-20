@@ -7,6 +7,8 @@ import { Supervisor } from './pages/home/supervisor/supervisor/supervisor';
 import { Operador } from './pages/home/operador/operador/operador';
 import { loginGuard } from './guard/login.guard';
 import { authGuard } from './guard/auth.guard';
+import { Dashboard } from './pages/home/dashboard/dashboard/dashboard';
+import { Historico } from './pages/home/historico/historico/historico';
 
 export const routes: Routes = [
   { path: '', component: Login,
@@ -18,6 +20,8 @@ export const routes: Routes = [
       {path:'admin', component: Admin},
       {path:'supervisor', component: Supervisor},
       {path:'operador', component: Operador},
+      {path:'dashboard', component: Dashboard},
+      {path:'historico', component: Historico},
     ]
   },
   { path: 'register', component: Register },

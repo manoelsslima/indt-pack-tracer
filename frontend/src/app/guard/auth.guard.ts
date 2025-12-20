@@ -5,8 +5,8 @@ import { inject } from '@angular/core';
 export const authGuard: CanActivateFn = (route, state):boolean => {
   const authLoginService = inject(LoginService);
   const router = inject(Router);
-  console.log('authGuard:', authLoginService.isAuthenticated());
-  if (authLoginService.isAuthenticated()) {
+  console.log('authGuard:', authLoginService.authenticatedUser());
+  if (authLoginService.authenticatedUser() !== 'NotFound') {
     return true;
   } else{
   router.navigate(['']);

@@ -1,5 +1,13 @@
-<p>home works!</p>
-<br>
-@if(isAuthenticated()){
-<button (click)="logOut()">Logout</button>
+<h1>{{ systemName() }}</h1>
+<p>Bem-vindo {{ authenticatedUser()?.name }}!</p>
+<p>Grupo: {{ getNomeGrupo() }}</p>
+<p>Setor: {{ getSetorNameById() }}</p>
+<button class="bg-red-500 text-white font-bold py-2 px-4 rounded" (click)="logOut()">Logout</button>
+<br />
+@if(authenticatedUser()?.grupo==1){
+<app-admin></app-admin>
+} @if(authenticatedUser()?.grupo==2){
+<app-supervisor></app-supervisor>
+} @if(authenticatedUser()?.grupo==3){
+<app-operador></app-operador>
 }
