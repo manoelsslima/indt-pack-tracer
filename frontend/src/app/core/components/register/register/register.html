@@ -1,10 +1,10 @@
 <div class="min-h-screen flex items-center justify-center">
-  <div class="flex w-[100vh] h-[65vh] bg-white rounded-xl shadow-lg">
+  <div class="flex w-[100vh] h-[65vh] bg-white rounded-xl shadow-lg justify-center">
     <section class="w-1/2 flex flex-col gap-8 p-8 justify-center items-center">
-      <h2 class="text-2sm font-bold flex justify-center">PACK TRACER - CADASTRO USUÁRIO</h2>
+      <h2 class="text-2xl font-bold flex justify-center">PACK TRACER - CADASTRO USUÁRIO</h2>
       <div class="flex flex-col justify-center align-center">
         <form action="" class="flex flex-col gap-2 justify-center align-center">
-          <div class="flex flex-col">
+          <div class="flex flex-col w-80">
             <label for="usuario">Usuário</label>
             <input
               #usuarioInput
@@ -51,9 +51,16 @@
             />
           </div>
         </form>
-        <div class="justify-between w-[200px] flex gap-4">
+        <div class="justify-between w-50 flex gap-4">
           <button
-            (click)="salvar(usuarioInput.value, nomeInput.value, passwordInput.value, passwordConfirmacaoInput.value)"
+            (click)="
+              salvar(
+                usuarioInput.value,
+                nomeInput.value,
+                passwordInput.value,
+                passwordConfirmacaoInput.value
+              )
+            "
             type="submit"
             class="bg-green-200 my-5 font-bold text-black h-9 rounded-full px-6 shadow-md flex justify-center items-center cursor-pointer"
           >
