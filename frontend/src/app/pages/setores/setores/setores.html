@@ -1,1 +1,8 @@
 <p>setores works!</p>
+<button class="bg-yellow-200">Adicionar</button>
+@for(setor of setores; track setor.SetorID) {
+  <div>{{setor.SetorID}}</div>
+  <div>{{setor.Nome}}</div>
+  <button (click)="removerSetor(setor.SetorID)" class="bg-red-200">Excluir</button>
+  <button (click)="alterarSetor(setor.SetorID)" class="bg-red-200">Editar</button>
+}

@@ -1,1 +1,28 @@
-<p>itens works!</p>
+
+<div>
+  <p>Processos</p>
+  <button (click)="newProcesso()" class="bg-blue-250 text-black">Novo</button>
+</div>
+<br>
+
+@for(processo of meusProcessos; track processo.ProcessoId){
+<div class="flex">
+<p>Processo ID: {{ processo.ProcessoId }}</p>
+<p>Item Code: {{ processo.ItemID }}</p>
+<p>Item SKU: {{ processo.ItemSKU }}</p>
+<p>Item Lote: {{ processo.Lote }}</p>
+<p>Qde: {{ processo.Quantidade }}</p>
+<p>Pode Expedir ? {{ processo.Expedicao }}</p>
+<p>Setor1: {{ processo.Setor1 }}</p>
+<p>Setor2: {{ processo.Setor2 }}</p>
+<p>Setor3: {{ processo.Setor3 }}</p>
+<p>Setor4: {{ processo.Setor4 }}</p>
+<p>Setor5: {{ processo.Setor5 }}</p>
+<p>Data Criado: {{ processo.DataHoraCriada }}</p>
+<p>Data Iniciado:{{ processo.DataHoraInicial }}</p>
+<p>Data Conclusão: {{ processo.DataHoraFinal }}</p>
+<p>Observações: {{ processo.Observacoes }}</p>
+<p>Status: {{ processo.Status }}</p>
+<button (click)="imprimirQr()" class="bg-green-500 text-black m-5 sm-text">Imprimir QrCodigo</button>
+</div>
+}

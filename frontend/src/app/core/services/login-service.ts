@@ -30,7 +30,31 @@ export class LoginService {
     setorId: 1,
   };
 
-  private users = signal<User[]>([this.user1, this.user2, this.user3, this.user4, this.user5]);
+  user6: User = {
+    id: 'usuario.turma',
+    grupo: 3,
+    name: 'usuario turma',
+    password: 'usuario',
+    setorId: 4,
+  };
+
+  user7: User = {
+    id: 'montagem.turma',
+    grupo: 3,
+    name: 'montagem turma',
+    password: 'montagem',
+    setorId: 2,
+  };
+
+  private users = signal<User[]>([
+    this.user1,
+    this.user2,
+    this.user3,
+    this.user4,
+    this.user5,
+    this.user6,
+    this.user7,
+  ]);
   readonly userlist = this.users.asReadonly();
 
   authenticatedUser = signal<string>(this.initializeAuthState());
@@ -72,6 +96,7 @@ export class LoginService {
   getUsers(): User[] {
     return this.users();
   }
+
   deleteUser(usuarioId: string): void {
     this.users.update((users) => users.filter((user) => user.id !== usuarioId));
   }

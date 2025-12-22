@@ -18,12 +18,12 @@ export class Login {
 
  senhaInvalida=computed(()=> {
     const password= this.senha();
-    return password.length < 4;
+    return password.length < 4 && password!=='';
  });
  
  usuarioInvalido=computed(()=> {
     const user= this.usuario();
-    return user.length < 6;
+    return user.length < 6 && user!=='';
  });
 
  onSubmitedOk=computed(()=> {
