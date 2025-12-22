@@ -1,1 +1,15 @@
-<p>dashboard works!</p>
+<p>Dashboard</p>
+<button class="bg-yellow-400 M-8" (click)="rodarConsulta()">Carregar Dados</button>
+
+<div (onload)="rodarConsulta()">
+    <h2>Quantidade Total de Processos: {{qdeProcessosTotal}}</h2>
+    <h2>Quantidade Processos com Defeito:{{qdeProcessosDefeito()}}</h2>
+    <h2>Quantidade Processos Concluídos:{{qdeProcessosConcluido()}}</h2>
+    <h2>Quantidade Processos Pendentes:{{qdeProcessosPendente()}}</h2>
+</div>
+
+<div>
+    <h2>Quantidade Total de Processos: {{qdeProcessosTotal}}</h2>
+    <h2>Quantidade Processos Liberados para Expedição: {{qdeProcessosExpedicaoSim()}}</h2>
+    <h2>Quantidade Processos Não Liberados para Expedição: {{qdeProcessosExpedicaoNao()}}</h2>
+</div>
