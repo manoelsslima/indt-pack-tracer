@@ -9,21 +9,40 @@ import { loginGuard } from './guard/login.guard';
 import { authGuard } from './guard/auth.guard';
 import { Dashboard } from './pages/home/dashboard/dashboard/dashboard';
 import { Historico } from './pages/home/historico/historico/historico';
+import { Usuarios } from './pages/usuarios/usuarios/usuarios';
+import { Setores } from './pages/setores/setores/setores';
+import { Itens } from './pages/itens/itens/itens';
 
 export const routes: Routes = [
-  { path: '', component: Login,
-    canActivate:[loginGuard]
-   },
-  { path: 'home', component: Home, 
-    canActivate:[authGuard],
-    children: [        
-      {path:'admin', component: Admin},
-      {path:'supervisor', component: Supervisor},
-      {path:'operador', component: Operador},
-      {path:'dashboard', component: Dashboard},
-      {path:'historico', component: Historico},
-    ]
+  { path: '', component: Login, canActivate: [loginGuard] },
+  {
+    path: 'home',
+    component: Home,
+    canActivate: [authGuard],
+    children: [
+      {
+        path: 'admin',
+        component: Admin,
+        children: [
+          { path: 'usuarios', component: Usuarios },
+          { path: 'setores', component: Setores },
+          { path: 'dashboard', component: Dashboard },
+        ],
+      },
+      {
+        path: 'supervisor',
+        component: Supervisor,
+        children: [
+          { path: 'itens', component: Itens },
+          { path: 'historico', component: Historico },
+        ],
+      },
+      { path: 'operador', component: Operador },
+      { path: 'dashboard', component: Dashboard },
+      { path: 'historico', component: Historico },
+    ],
   },
+  //{ path: 'usuarios', component: Usuarios },
   { path: 'register', component: Register },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];

@@ -10,7 +10,6 @@ export class SetorService {
   Setor3: Setor = { SetorID: 3, Nome: 'Inspeção' };
   Setor4: Setor = { SetorID: 4, Nome: 'Testes' };
   Setor5: Setor = { SetorID: 5, Nome: 'Embalagem' };
-  Setor6: Setor = { SetorID: 6, Nome: 'Expedição' };
   Setor7: Setor = { SetorID: 7, Nome: 'Administração' };
   Setor8: Setor = { SetorID: 8, Nome: 'Supervisão' };
   Setor9: Setor = { SetorID: 0, Nome: 'Desconhecido' };
@@ -21,7 +20,6 @@ export class SetorService {
     this.Setor3,
     this.Setor4,
     this.Setor5,
-    this.Setor6,
     this.Setor7,
     this.Setor8
   ]);

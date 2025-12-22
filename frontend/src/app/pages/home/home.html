@@ -2,6 +2,22 @@
 <p>Bem-vindo {{ authenticatedUser()?.name }}!</p>
 <p>Grupo: {{ getNomeGrupo() }}</p>
 <p>Setor: {{ getSetorNameById() }}</p>
+@if(getGrupo()==1){
+<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="setores()">
+  Setores
+</button>
+<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="usuarios()">
+  Usuários
+</button>
+<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="dashboard()">
+  Dashboard
+</button>
+} @if(getGrupo()==2){
+<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="itens()">Itens</button>
+<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="historico()">
+  Histórico
+</button>
+}
 <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" (click)="logOut()">Logout</button>
 <br />
 @if(authenticatedUser()?.grupo==1){

@@ -18,10 +18,34 @@ export class Home {
   private servico = inject(LoginService);
   private servicoSetor = inject(SetorService);
   private router = inject(Router);
+  
   logOut() {
     this.servico.logout();
     this.router.navigate(['/login']);
   }
+  
+  itens() {
+    this.router.navigate(['home/supervisor/itens']);
+  }
+  
+  historico() {
+    this.router.navigate(['home/supervisor/historico']);
+  }
+  
+  setores() {
+    this.router.navigate(['home/admin/setores']);
+  }
+  
+  usuarios() {
+    this.router.navigate(['home/admin/usuarios']);
+  }
+  
+  dashboard() {
+    this.router.navigate(['home/admin/dashboard']);
+  }
+
+
+
   isAuthenticated() {
     var result: boolean;
     result = this.servico.authenticatedUser() !== 'NotFound';
@@ -60,5 +84,13 @@ export class Home {
       }
       return 'Desconhecido';
     } else return 'Desconhecido';
+  }
+
+  getGrupo(): number {
+    if (this.authenticatedUser() !== null) {
+      let grupo: number = this.authenticatedUser()!.grupo;
+      return grupo;
+    }
+    return 0
   }
 }
