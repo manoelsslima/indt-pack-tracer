@@ -1,8 +1,24 @@
-<p>setores works!</p>
-<button class="bg-yellow-200">Adicionar</button>
-@for(setor of setores; track setor.SetorID) {
-  <div>{{setor.SetorID}}</div>
-  <div>{{setor.Nome}}</div>
-  <button (click)="removerSetor(setor.SetorID)" class="bg-red-200">Excluir</button>
-  <button (click)="alterarSetor(setor.SetorID)" class="bg-red-200">Editar</button>
+<h1>Lista de Setores</h1>
+
+<button class="bg-yellow-200">Adicionar➕</button>
+
+@for (setor of setores; track setor.SetorID) {
+  <div>
+    <p>Id: {{ setor.SetorID }}</p>
+    <p>Nome: {{ setor.Nome }}</p>
+
+    <button
+      class="bg-red-200"
+      (click)="removerSetor(setor.SetorID)">
+      Excluir
+    </button>
+
+    <button
+      class="bg-blue-200"
+      (click)="alterarSetor(setor.SetorID)">
+      Editar
+    </button>
+
+    <hr>
+  </div>
 }

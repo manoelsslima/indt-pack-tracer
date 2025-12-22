@@ -1,0 +1,102 @@
+:host {
+  display: block;
+  padding: 24px;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Título ===== */
+h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+p {
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+/* ===== Cards ===== */
+.cards-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mini-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 14px 18px;
+  border-radius: 12px;
+  min-width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* ===== Botões ===== */
+.actions {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.bg-green-500 {
+  background-color: #16a34a;
+}
+
+.bg-red-500 {
+  background-color: #dc2626;
+}
+
+.logout {
+  margin-top: 16px;
+}
+
+/* ===== Componentes ===== */
+app-admin,
+app-supervisor,
+app-operador {
+  display: block;
+  margin-top: 32px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
