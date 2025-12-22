@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class LoginService {
-  user1: User = { id: 'admin', grupo: 1, name: 'admin', password: 'admin' };
-  user2: User = { id: 'user', grupo: 2, name: 'user', password: 'user' };
-  user3: User = { id: 'gabriel.vinicius', grupo: 1, name: 'Gabriel Vinicius', password: 'gabriel' };
-  user4: User = { id: 'allan.resutto', grupo: 1, name: 'Allan Resutto', password: 'allan' };
-  user5: User = { id: 'victor.santos', grupo: 1, name: 'Victor Santos', password: 'victor' };
+  user1: User = { id: 'admin', grupo: 1, name: 'admin', password: 'admin', setorId: 0 };
+  user2: User = { id: 'user', grupo: 2, name: 'user', password: 'user', setorId: 0 };
+  user3: User = { id: 'gabriel.vinicius', grupo: 1, name: 'Gabriel Vinicius', password: 'gabriel', setorId: 0 };
+  user4: User = { id: 'allan.resutto', grupo: 1, name: 'Allan Resutto', password: 'allan' , setorId: 0};
+  user5: User = { id: 'victor.santos', grupo: 3, name: 'Victor Santos', password: 'victor', setorId: 0 };
 
   isAuthenticated = signal<boolean>(this.initializeAuthState());
 

@@ -1,5 +1,5 @@
 import { booleanAttribute, Component, inject } from '@angular/core';
-import { LoginService } from '../../../core/services/login-service';
+import { LoginService } from '../../core/services/login-service';
 import { Router } from '@angular/router';
 
 @Component({
