@@ -1,0 +1,12 @@
+<form [formGroup]="setorForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="setorId">Id:</label>
+    <input id="setorId" formControlName="setorId" type="text"/>
+  </div>
+  <div>
+    <label for="nome">Nome:</label>
+    <input id="nome" formControlName="nome"  type="text"/>
+  </div>
+  <button  class="bg-green-300" type="submit">Salvar</button>  
+  <button  class="bg-red-300" (click)="cancelar()">Cancelar</button>  
+</form>  

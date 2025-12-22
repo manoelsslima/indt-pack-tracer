@@ -67,7 +67,7 @@ export class Home {
   getSetorNameById(): string {
     if (this.authenticatedUser() !== null) {
       let setorId: number = this.authenticatedUser()!.setorId;
-      return this.servicoSetor.getSetorNameById(setorId);
+      return `${this.servicoSetor.getSetorNameById(setorId)} - ${setorId}`;
     }
     return 'Desconhecido';
   }
@@ -93,4 +93,5 @@ export class Home {
     }
     return 0
   }
+
 }

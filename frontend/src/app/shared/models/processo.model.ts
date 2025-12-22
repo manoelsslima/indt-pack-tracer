@@ -1,16 +1,21 @@
 export interface Processo {
-  Processo: string;
-  ProcessoId: number;
-  SetorIdOrigem: number;
-  SetorIdDestino: number;
   ItemID: string;
   ItemSKU: string;
-  DataHoraIn: string;
-  DataHoraOut: string;
+  Lote: string;
+  Quantidade: number;
+  Expedicao: boolean;
+  ProcessoId: number;
+  Setor1: number;
+  Setor2: number;
+  Setor3: number;
+  Setor4: number;
+  Setor5: number;
+  DataHoraCriada: string;
+  DataHoraInicial: string;
+  DataHoraFinal: string;
   Observacoes: string;
   Status: ProcessoStatus; // Pendente,Concluído,Defeito
 }
-
 export enum ProcessoStatus {
   PENDENTE = 'Pendente',
   CONCLUIDO = 'Concluido',

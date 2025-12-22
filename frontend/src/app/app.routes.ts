@@ -14,6 +14,7 @@ import { Setores } from './pages/setores/setores/setores';
 import { Itens } from './pages/itens/itens/itens';
 import { form } from '@angular/forms/signals';
 import { UsuarioForm } from './pages/usuarios/usuarios/form/usuario-form/usuario-form';
+import { SetorForm } from './pages/setores/form/setor-form/setor-form';
 
 export const routes: Routes = [
   { path: '', component: Login, canActivate: [loginGuard] },
@@ -29,6 +30,7 @@ export const routes: Routes = [
           { path: 'usuarios', component: Usuarios },
           { path: 'usuarios-form', component: UsuarioForm },
           { path: 'setores', component: Setores },
+          { path: 'setor-form', component: SetorForm },
           { path: 'dashboard', component: Dashboard },
         ],
       },
