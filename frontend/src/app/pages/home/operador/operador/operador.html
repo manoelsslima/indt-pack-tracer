@@ -1,11 +1,13 @@
+<input #taskInput type="text" value="{{meuProcesso?.ProcessoId}}"/>
 <p>operador works!</p>
-<p>{{meuProcesso?.ProcessoId}}</p>
-<p>{{meuProcesso?.ItemID}}</p>
-<p>{{meuProcesso?.ItemSKU}}</p>
-<p>{{meuProcesso?.Lote}}</p>
-<p>{{meuProcesso?.Setor1}}</p>
-<p>{{meuProcesso?.Setor2}}</p>
-<p>{{meuProcesso?.Setor3}}</p>
-<p>{{meuProcesso?.Setor4}}</p>
-<p>{{meuProcesso?.Setor5}}</p>
-<p>{{meuProcesso?.Status}}</p>
+<p>Processo ID: {{meuProcesso?.ProcessoId}}</p>
+<p>Item ID: {{meuProcesso?.ItemID}}</p>
+<p>Item SKU: {{meuProcesso?.ItemSKU}}</p>
+<p>Item Lote: {{meuProcesso?.Lote}}</p>
+<p>Setor 1: {{meuProcesso?.Setor1}}</p>
+<p>Setor 2: {{meuProcesso?.Setor2}}</p>
+<p>Setor 3: {{meuProcesso?.Setor3}}</p>
+<p>Setor 4: {{meuProcesso?.Setor4}}</p>
+<p>Setor 5: {{meuProcesso?.Setor5}}</p>
+<p>Status Processo: {{meuProcesso?.Status}}</p>
+<p><button class="bg-green-500" (click)="proximaEtapa(taskInput.value)">Salvar Etapa</button></p>
