@@ -1,0 +1,174 @@
+:host {
+  display: block;
+  padding: 24px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background: transparent;
+}
+
+/* ===== CARD DO PROCESSO ===== */
+.flex {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px 18px;
+  padding: 22px 24px 70px;
+  margin-bottom: 26px;
+  background: transparent;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.flex:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ETIQUETA DO FLUXO ===== */
+.flex::before {
+  content: "🔄 Fluxo do Processo";
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  background: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ===== CAMPOS ===== */
+.flex p {
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #374151;
+  background: transparent;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #f1f5f9;
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.flex p:hover {
+  background: #f8fafc;
+  transform: translateX(4px);
+  border-color: #c7d2fe;
+}
+
+/* ===== DESTAQUES ===== */
+.flex p:nth-of-type(1),
+.flex p:nth-of-type(16) {
+  background: #f8fafc;
+  font-weight: 700;
+  color: #1e40af;
+  border-color: #c7d2fe;
+}
+
+/* ===== ÍCONES ===== */
+.flex p:nth-of-type(1)::before { content: "🆔"; }
+.flex p:nth-of-type(2)::before { content: "🏷️"; }
+.flex p:nth-of-type(3)::before { content: "📦"; }
+.flex p:nth-of-type(4)::before { content: "🧾"; }
+.flex p:nth-of-type(5)::before { content: "🔢"; }
+.flex p:nth-of-type(6)::before { content: "🚚"; }
+
+/* ===== SETORES ===== */
+.flex p:nth-of-type(7),
+.flex p:nth-of-type(8),
+.flex p:nth-of-type(9),
+.flex p:nth-of-type(10),
+.flex p:nth-of-type(11) {
+  background: #f0fdfa;
+  border-color: #99f6e4;
+}
+
+.flex p:nth-of-type(7)::before,
+.flex p:nth-of-type(8)::before,
+.flex p:nth-of-type(9)::before,
+.flex p:nth-of-type(10)::before,
+.flex p:nth-of-type(11)::before {
+  content: "🏭";
+}
+
+/* Setas do fluxo */
+.flex p:nth-of-type(7)::after,
+.flex p:nth-of-type(8)::after,
+.flex p:nth-of-type(9)::after,
+.flex p:nth-of-type(10)::after {
+  content: "➜";
+  position: absolute;
+  right: -14px;
+  font-size: 16px;
+  color: #14b8a6;
+}
+
+/* ===== LINHA DO TEMPO ===== */
+.flex p:nth-of-type(12),
+.flex p:nth-of-type(13),
+.flex p:nth-of-type(14) {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.flex p:nth-of-type(12)::before { content: "📅"; }
+.flex p:nth-of-type(13)::before { content: "⏱️"; }
+.flex p:nth-of-type(14)::before { content: "🏁"; }
+
+/* ===== OBSERVAÇÕES ===== */
+.flex p:nth-of-type(15) {
+  background: #f8fafc;
+}
+
+.flex p:nth-of-type(15)::before {
+  content: "📝";
+}
+
+/* ===== STATUS ===== */
+.flex p:nth-of-type(16)::before {
+  content: "📌";
+}
+
+/* ===== BOTÃO ===== */
+.flex button {
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+  background: #16a34a;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flex button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 26px rgba(22, 163, 74, 0.5);
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flex {
+  animation: enter 0.4s ease both;
+}

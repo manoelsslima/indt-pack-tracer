@@ -1,29 +1,53 @@
 <h1>{{ systemName() }}</h1>
 <p>Bem-vindo {{ authenticatedUser()?.name }}!</p>
-<p>Grupo: {{ getNomeGrupo() }}</p>
-<p>Setor: {{ getSetorNameById() }}</p>
-@if(getGrupo()==1){
-<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="setores()">
-  Setores
-</button>
-<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="usuarios()">
-  Usuários
-</button>
-<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="dashboard()">
-  Dashboard
-</button>
-} @if(getGrupo()==2){
-<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="itens()">Processo</button>
-<button class="bg-green-500 text-white font-bold py-2 px-4 rounded" (click)="historico()">
-  Histórico
-</button>
+
+<div class="cards-container">
+
+  <!-- CARD GRUPO -->
+  <div class="mini-card">
+    <div class="icon">👥</div>
+    <div class="info">
+      <span class="label">Grupo</span>
+      <span class="value">{{ getNomeGrupo() }}</span>
+    </div>
+  </div>
+
+  <!-- CARD SETOR -->
+  <div class="mini-card">
+    <div class="icon">🏢</div>
+    <div class="info">
+      <span class="label">Setor</span>
+      <span class="value">{{ getSetorNameById() }}</span>
+    </div>
+  </div>
+
+</div>
+
+@if (getGrupo() == 1) {
+  <div class="actions">
+    <button class="bg-green-500" (click)="setores()">Setores</button>
+    <button class="bg-green-500" (click)="usuarios()">Usuários</button>
+    <button class="bg-green-500" (click)="dashboard()">Dashboard</button>
+  </div>
 }
-<button class="bg-red-500 text-white font-bold py-2 px-4 rounded" (click)="logOut()">Logout</button>
-<br />
-@if(authenticatedUser()?.grupo==1){
-<app-admin></app-admin>
-} @if(authenticatedUser()?.grupo==2){
-<app-supervisor></app-supervisor>
-} @if(authenticatedUser()?.grupo==3){
-<app-operador></app-operador>
+
+@if (getGrupo() == 2) {
+  <div class="actions">
+    <button class="bg-green-500" (click)="itens()">Processo</button>
+    <button class="bg-green-500" (click)="historico()">Histórico</button>
+  </div>
+}
+
+<button class="bg-red-500 logout" (click)="logOut()">Logout</button>
+
+@if (authenticatedUser()?.grupo == 1) {
+  <app-admin></app-admin>
+}
+
+@if (authenticatedUser()?.grupo == 2) {
+  <app-supervisor></app-supervisor>
+}
+
+@if (authenticatedUser()?.grupo == 3) {
+  <app-operador></app-operador>
 }
