@@ -12,6 +12,8 @@ import { Historico } from './pages/home/historico/historico/historico';
 import { Usuarios } from './pages/usuarios/usuarios/usuarios';
 import { Setores } from './pages/setores/setores/setores';
 import { Itens } from './pages/itens/itens/itens';
+import { form } from '@angular/forms/signals';
+import { UsuarioForm } from './pages/usuarios/usuarios/form/usuario-form/usuario-form';
 
 export const routes: Routes = [
   { path: '', component: Login, canActivate: [loginGuard] },
@@ -25,6 +27,7 @@ export const routes: Routes = [
         component: Admin,
         children: [
           { path: 'usuarios', component: Usuarios },
+          { path: 'usuarios-form', component: UsuarioForm },
           { path: 'setores', component: Setores },
           { path: 'dashboard', component: Dashboard },
         ],

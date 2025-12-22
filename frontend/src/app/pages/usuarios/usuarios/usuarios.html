@@ -1,1 +1,12 @@
-<p>usuarios works!</p>
+<h1>Lista de Usuários</h1>
+@for(usuario of getUsers(); track usuario.id){
+  <div>
+    <p>Id: {{usuario.id}}</p>
+    <p>Nome: {{usuario.name}}</p>
+    <p>Grupo: {{usuario.grupo}}</p>
+    <p>Setor: {{usuario.setorId}}</p>
+    <button class="bg-red-200" (click)="deleteUser(usuario.id)">Excluir</button>
+    <button class="bg-blue-200" (click)="editUser(usuario.id)">Editar</button>
+    <hr>
+  </div>
+}

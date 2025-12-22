@@ -1,0 +1,30 @@
+<p>Editando Usuário</p>
+<form [formGroup]="usuarioForm" (ngSubmit)="onEditar()">
+  <div>
+    <label for="username">Usuário:</label>
+    <input id="username" formControlName="username" type="text" />
+  </div>
+
+  <div>
+    <label for="name">Nome:</label>
+    <input id="name" formControlName="name" type="text" />
+  </div>
+
+  <div>
+    <label for="password">Senha:</label>
+    <input id="password" formControlName="password" type="password" />
+  </div>
+
+  <div>
+    <label for="grupo">Grupo:</label>
+    <input id="grupo" formControlName="grupo" type="number" />
+  </div>
+
+  <div>
+    <label for="setor">Setor:</label>
+    <input id="setor" formControlName="setor" type="number" />
+  </div>
+
+  <button class="bg-green-300" type="submit">Salvar</button>
+  <button class="bg-red-300" (click)="cancelar()">Cancelar</button>
+
