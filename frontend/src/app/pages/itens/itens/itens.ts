@@ -1,5 +1,6 @@
 import { Component,inject } from '@angular/core';
 import { ItemService } from '../../../core/services/item-service';
+import { SetorService } from '../../../core/services/setor-service';
 
 @Component({
   selector: 'app-itens',
@@ -20,5 +21,11 @@ export class Itens {
   imprimirQr():void{
     alert('Imprimindo QrCode');
   }
+
+  getSetorIdUsuario():number{
+    return this.itemServico.getSetorId();
+  }
+
+  SetorIdUsuario=this.getSetorIdUsuario();
 
 }

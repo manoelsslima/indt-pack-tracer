@@ -23,27 +23,41 @@ export class LoginService {
     setorId: 7,
   };
   user5: User = {
-    id: 'victor.santos',
+    id: 'primeiro.turma',
     grupo: 3,
-    name: 'Victor Santos',
-    password: 'victor',
+    name: 'primeiro turma',
+    password: 'primeiro',
     setorId: 1,
   };
 
   user6: User = {
-    id: 'usuario.turma',
+    id: 'quarto.turma',
     grupo: 3,
-    name: 'usuario turma',
-    password: 'usuario',
+    name: 'quarto turma',
+    password: 'quarto',
     setorId: 4,
   };
 
   user7: User = {
-    id: 'montagem.turma',
+    id: 'segundo.turma',
     grupo: 3,
-    name: 'montagem turma',
-    password: 'montagem',
+    name: 'segundo turma',
+    password: 'segundo',
     setorId: 2,
+  };
+  user8: User = {
+    id: 'terceiro.turma',
+    grupo: 3,
+    name: 'terceiro turma',
+    password: 'terceiro',
+    setorId: 3,
+  };
+  user9: User = {
+    id: 'quinto.turma',
+    grupo: 3,
+    name: 'quinto turma',
+    password: 'quinto',
+    setorId: 5,
   };
 
   private users = signal<User[]>([
@@ -54,6 +68,8 @@ export class LoginService {
     this.user5,
     this.user6,
     this.user7,
+    this.user8,
+    this.user9,
   ]);
   readonly userlist = this.users.asReadonly();
 

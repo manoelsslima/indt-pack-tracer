@@ -37,5 +37,9 @@ export class Operador {
   setorAtual:number=this.getSetor();
   meuProcesso = this.servicoItem.getProcessoCorrente(this.setorAtual);
 
+  proximaEtapa(processoId:string):void{
+    console.log(processoId);
+  this.servicoItem.updateProcesso(Number(processoId),this.setorAtual);
+  }
 
 }
