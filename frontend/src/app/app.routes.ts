@@ -1,20 +1,19 @@
 import { Routes } from '@angular/router';
-import { Login } from './core/components/login/login';
 import { Home } from './pages/home/home';
-import { Register } from './core/components/register/register/register';
-import { Admin } from './pages/home/admin/admin/admin';
-import { Supervisor } from './pages/home/supervisor/supervisor/supervisor';
-import { Operador } from './pages/home/operador/operador/operador';
-import { loginGuard } from './guard/login.guard';
-import { authGuard } from './guard/auth.guard';
-import { Dashboard } from './pages/home/dashboard/dashboard/dashboard';
-import { Historico } from './pages/home/historico/historico/historico';
+import { Admin } from './pages/admin/admin';
+import { Historico } from './pages/historico/historico';
 import { Usuarios } from './pages/usuarios/usuarios/usuarios';
 import { Setores } from './pages/setores/setores/setores';
-import { Itens } from './pages/itens/itens/itens';
-import { form } from '@angular/forms/signals';
 import { UsuarioForm } from './pages/usuarios/usuarios/form/usuario-form/usuario-form';
 import { SetorForm } from './pages/setores/form/setor-form/setor-form';
+import { Login } from './pages/auth/login/login';
+import { loginGuard } from './core/guard/login.guard';
+import { authGuard } from './core/guard/auth.guard';
+import { Register } from './pages/auth/register/register';
+import { Dashboard } from './pages/dashboard/dashboard';
+import { Supervisor } from './pages/supervisor/supervisor';
+import { Itens } from './pages/itens/itens';
+import { Operador } from './pages/operador/operador';
 
 export const routes: Routes = [
   { path: '', component: Login, canActivate: [loginGuard] },

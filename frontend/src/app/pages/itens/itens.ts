@@ -1,6 +1,5 @@
 import { Component,inject } from '@angular/core';
-import { ItemService } from '../../../core/services/item-service';
-import { SetorService } from '../../../core/services/setor-service';
+import { ItemService } from '../../core/services/item-service';
 
 @Component({
   selector: 'app-itens',

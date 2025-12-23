@@ -2,7 +2,7 @@ import { Injectable, signal, inject } from '@angular/core';
 import { Processo, ProcessoStatus } from '../../shared/models/processo.model';
 import { readonly } from '@angular/forms/signals';
 import { LoginService } from './login-service';
-import { User } from '../../shared/models/user.model';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',

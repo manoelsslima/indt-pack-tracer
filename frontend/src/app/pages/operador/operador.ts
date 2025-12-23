@@ -1,8 +1,8 @@
 import { Component,inject } from '@angular/core';
-import { ItemService } from '../../../../core/services/item-service';
-import { Processo } from '../../../../shared/models/processo.model';
-import { LoginService } from '../../../../core/services/login-service';
-import { User } from '../../../../shared/models/user.model';
+import { ItemService } from '../../core/services/item-service';
+import { LoginService } from '../../core/services/login-service';
+import { User } from '../../core/models/user.model';
+
 @Component({
   selector: 'app-operador',
   imports: [],
@@ -14,8 +14,8 @@ export class Operador {
   private servico = inject(LoginService);
 
   //processos = this.servicoItem.getProcessos();
-  
-  
+
+
 
   authenticatedUser(): User | null {
     let result: User;

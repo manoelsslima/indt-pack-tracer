@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
-import { ItemService } from '../../../../core/services/item-service';
-import { Processo, ProcessoStatus } from '../../../../shared/models/processo.model';
+import { Processo, ProcessoStatus } from '../../shared/models/processo.model';
+import { ItemService } from '../../core/services/item-service';
 
 @Component({
   selector: 'app-dashboard',
