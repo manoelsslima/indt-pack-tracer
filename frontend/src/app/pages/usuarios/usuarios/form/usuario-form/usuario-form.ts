@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { User } from '../../../../../core/models/user.model';
+import { User } from '../../../../../shared/models/user.model';
 import { LoginService } from '../../../../../core/services/login-service';
 import { FormBuilder, Validators,FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { Router } from '@angular/router';

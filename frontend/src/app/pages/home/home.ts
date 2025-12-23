@@ -1,7 +1,7 @@
 import { booleanAttribute, Component, inject } from '@angular/core';
 import { LoginService } from '../../core/services/login-service';
 import { Router } from '@angular/router';
-import { User } from '../../core/models/user.model';
+import { User } from '../../shared/models/user.model';
 import { Admin } from '../admin/admin';
 import { nomeSistema, versaoSistema } from '../../shared/models/config/config';
 import { SetorService } from '../../core/services/setor-service';

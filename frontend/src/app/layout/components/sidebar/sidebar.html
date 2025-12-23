@@ -1,0 +1,27 @@
+<div class="sidenav">
+  <div class="logo-container">
+    <button class="logo">
+      <i class="material-symbols-outlined">menu</i>
+    </button>
+    <div class="logo-text">
+      Pack Tracer
+    </div>
+    <button>
+      <i class="material-symbols-outlined">close</i>
+    </button>
+  </div>
+  <div class="sidenav-nav">
+    @for(item of itemsDoMenu; track $index) {
+      <li class="sidenav-nav-item">
+        <a class="sindenav-nav-link"
+          [routerLink]="item.routeLink"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+        <i class="sidenav-link-icon material-symbols-outlined">{{item.icon}}</i>
+        <span class="sidenav-link-text">{{ item.label }}</span>
+      </a>
+      </li>
+    }
+  </div>
+</div>
