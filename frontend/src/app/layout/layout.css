@@ -1,7 +1,23 @@
-.layout-container {
-  height: 100vh;
+/* .header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+} */
+
+.drawer-container {
+  /* Altura menos header */
+  height: calc(100vh - 104px);
 }
 
-.content {
-  padding: 16px;
+.sidebar-drawer {
+  width: 210px;
+  border-radius: 0 !important;
+}
+
+.main-content {
+  padding: 20px;
+  min-height: calc(100vh - 104px); /* Altura menos header e footer */
+  padding-bottom: 20px;
 }

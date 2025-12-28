@@ -1,1 +1,20 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="toggleSidebar.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <div class="logo-title">
+    <span class="app-title">Pack Tracer</span>
+    <mat-icon>qr_code</mat-icon>
+  </div>
+
+  <span class="flex-spacer"></span>
+  <button mat-button>
+    <mat-icon>account_circle</mat-icon>
+    Perfil
+  </button>
+  <a routerLink="/logout" mat-button>
+    <mat-icon>logout</mat-icon>
+    Logout
+  </a>
+</mat-toolbar>

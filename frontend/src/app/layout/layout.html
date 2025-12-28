@@ -1,1 +1,13 @@
-<p>layout works!</p>
+<app-header (toggleSidebar)="toggleSidebar()"></app-header>
+
+<mat-drawer-container class="drawer-container" autosize>
+  <!-- menu lateral -->
+  <mat-drawer #drawer mode="side" [opened]="showSidebar" class="sidebar-drawer">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <!-- Conteúdo principal -->
+  <main class="page-content">
+    <router-outlet></router-outlet>
+  </main>
+</mat-drawer-container>
+<app-footer></app-footer>

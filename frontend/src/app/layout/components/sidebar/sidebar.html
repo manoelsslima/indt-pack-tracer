@@ -1,27 +1,26 @@
-<div class="sidenav">
-  <div class="logo-container">
-    <button class="logo">
-      <i class="material-symbols-outlined">menu</i>
-    </button>
-    <div class="logo-text">
-      Pack Tracer
-    </div>
-    <button>
-      <i class="material-symbols-outlined">close</i>
-    </button>
-  </div>
-  <div class="sidenav-nav">
-    @for(item of itemsDoMenu; track $index) {
-      <li class="sidenav-nav-item">
-        <a class="sindenav-nav-link"
-          [routerLink]="item.routeLink"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-        <i class="sidenav-link-icon material-symbols-outlined">{{item.icon}}</i>
-        <span class="sidenav-link-text">{{ item.label }}</span>
-      </a>
-      </li>
-    }
-  </div>
-</div>
+<mat-nav-list class="sidebar-nav">
+  <a mat-list-item routerLink="home" routerLinkActive="active">
+    <mat-icon matListIcon>home</mat-icon>
+    <span>Início</span>
+  </a>
+  <a mat-list-item routerLink="/dashboard">
+    <mat-icon matListIcon>dashboard</mat-icon>
+    <span>Dashboard</span>
+  </a>
+  <a mat-list-item routerLink="/cadastros/operador">
+    <mat-icon matListIcon>person</mat-icon>
+    <span>Cadastrar Operador</span>
+  </a>
+  <a mat-list-item routerLink="/cadastros/supervisor">
+    <mat-icon matListIcon>supervisor_account</mat-icon>
+    <span>Cadastrar Supervisor</span>
+  </a>
+  <a mat-list-item routerLink="/cadastros/setor">
+    <mat-icon matListIcon>supervisor_account</mat-icon>
+    <span>Cadastrar Setor</span>
+  </a>
+  <a mat-list-item routerLink="/cadastros/administrador">
+    <mat-icon matListIcon>admin_panel_settings</mat-icon>
+    <span>Cadastrar Administrador</span>
+  </a>
+</mat-nav-list>
