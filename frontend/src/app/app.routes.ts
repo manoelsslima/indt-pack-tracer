@@ -1,24 +1,54 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
+import { Layout } from './layout/layout';
 import { Admin } from './pages/admin/admin';
-import { Historico } from './pages/historico/historico';
 import { Usuarios } from './pages/usuarios/usuarios/usuarios';
-import { Setores } from './pages/setores/setores/setores';
 import { UsuarioForm } from './pages/usuarios/usuarios/form/usuario-form/usuario-form';
 import { SetorForm } from './pages/setores/form/setor-form/setor-form';
-import { Login } from './pages/auth/login/login';
-import { loginGuard } from './core/guard/login.guard';
-import { authGuard } from './core/guard/auth.guard';
-import { Register } from './pages/auth/register/register';
 import { Dashboard } from './pages/dashboard/dashboard';
-import { Supervisor } from './pages/supervisor/supervisor';
 import { Itens } from './pages/itens/itens';
-import { Operador } from './pages/operador/operador';
-import { Layout } from './layout/layout';
+import { Historico } from './pages/historico/historico';
+
+
+import { Operador } from './cadastros/operador/operador';
+import { Supervisor } from './cadastros/supervisor/supervisor';
+import { Setor } from './cadastros/setor/setor';
+import { Administrador } from './cadastros/administrador/administrador';
 
 export const routes: Routes = [
   {
-    path: '', component: Layout
+    path: '',
+    component: Layout,
+    children: [
+      { path: 'home', component: Home},
+      {
+        path: 'cadastros',
+        component: Admin,
+        pathMatch: 'prefix',
+        children: [
+          { path: 'operador', component: Operador },
+          { path: 'supervisor', component: Supervisor },
+          { path: 'setor', component: Setor },
+          { path: 'administrador', component: Administrador },
+
+          { path: 'usuarios', component: Usuarios },
+          { path: 'usuarios-form', component: UsuarioForm },
+          { path: 'setor-form', component: SetorForm },
+          { path: 'dashboard', component: Dashboard },
+        ],
+      },
+      {
+        path: 'supervisor',
+        component: Supervisor,
+        children: [
+          { path: 'itens', component: Itens },
+          { path: 'historico', component: Historico },
+        ],
+      },
+      { path: 'operador', component: Operador },
+      { path: 'dashboard', component: Dashboard },
+      { path: 'historico', component: Historico },
+    ]
   }
   // { path: '', component: Login, canActivate: [loginGuard] },
   // {
