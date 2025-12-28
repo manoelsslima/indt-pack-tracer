@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-supervisor',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './supervisor.html',
   styleUrl: './supervisor.css',
 })

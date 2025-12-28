@@ -2,7 +2,7 @@
   display: block;
   padding: 24px;
   background-color: #f4f6f8;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -90,7 +90,7 @@ button:hover {
 }
 
 /* ===== Componentes ===== */
-app-admin,
+/* app-admin,
 app-supervisor,
 app-operador {
   display: block;
@@ -99,4 +99,4 @@ app-operador {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-}
+} */
