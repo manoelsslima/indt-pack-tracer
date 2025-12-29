@@ -23,10 +23,10 @@ export class LoginService {
     setorId: 7,
   };
   user5: User = {
-    id: 'primeiro.turma',
+    id: 'manoel.lima',
     grupo: 3,
     name: 'primeiro turma',
-    password: 'primeiro',
+    password: 'manoel',
     setorId: 1,
   };
 
@@ -84,7 +84,7 @@ export class LoginService {
     return storedAuthState ? storedAuthState : 'NotFound';
   }
 
-  Login(username: string, password: string): User | null {
+  login(username: string, password: string): User | null {
     const foundUser = this.users().find(
       (user) => user.id === username && user.password === password
     );

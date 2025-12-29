@@ -1,0 +1,46 @@
+.page-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    height: 50vh; /* 100% da altura da tela */
+}
+
+.page-login h1 {
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    color: #2c3c3c;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.left, .right {
+    width: 50%;
+}
+
+.left {
+    background-color: #c8deba;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    background-color: #e1edd8;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.right h1 {
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

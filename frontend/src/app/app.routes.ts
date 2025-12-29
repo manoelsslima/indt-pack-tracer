@@ -8,12 +8,11 @@ import { SetorForm } from './pages/setores/form/setor-form/setor-form';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Itens } from './pages/itens/itens';
 import { Historico } from './pages/historico/historico';
-
-
-import { Operador } from './cadastros/operador/operador';
-import { Supervisor } from './cadastros/supervisor/supervisor';
-import { Setor } from './cadastros/setor/setor';
-import { Administrador } from './cadastros/administrador/administrador';
+import { Operador } from './pages/cadastros/operador/operador';
+import { Supervisor } from './pages/cadastros/supervisor/supervisor';
+import { Setor } from './pages/cadastros/setor/setor';
+import { Administrador } from './pages/cadastros/administrador/administrador';
+import { Login } from './pages/auth/login/login';
 
 export const routes: Routes = [
   {
@@ -49,7 +48,9 @@ export const routes: Routes = [
       { path: 'dashboard', component: Dashboard },
       { path: 'historico', component: Historico },
     ]
-  }
+  },
+  { path: 'login', component: Login },
+  { path: '**', redirectTo: 'login' },
   // { path: '', component: Login, canActivate: [loginGuard] },
   // {
   //   path: 'home',

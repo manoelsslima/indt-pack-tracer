@@ -1,66 +1,33 @@
-<div class="min-h-screen flex items-center justify-center">
-  <div class="flex w-[100vh] h-[65vh] bg-white rounded-xl shadow-lg overflow-hidden">
-    <div class="w-1/2 h-full bg-green-200 flex items-center justify-center">
-      <img src="imglogin.jpg" class="w-[120%] h-[105%] object-cover" alt="" />
-    </div>
+<!DOCTYPE html>
+<html lang="en">
 
-    <section class="w-1/2 flex flex-col gap-8 p-8 justify-center items-center">
-      <h2 class="text-2xl font-bold flex justify-center">PACK TRACER LOGIN</h2>
-      <div class="flex flex-col">
-        <form action="" class="flex flex-col gap-2">
-          <div class="flex flex-col">
-            <label for="usuario">Usuário</label>
-            <input
-              [(ngModel)]="usuario"
-              #usuarioInput
-              id="usuario"
-              name="usuario"
-              type="text"
-              placeholder="nome.sobrenome"
-              class="w-full rounded-full border border-gray-300 px-4 py-2 shadow-md"
-            />
-            @if(usuarioInvalido())  {
-            <p class="text-red-500 text-sm mt-2">O usuário deve ter mais de 5 caracteres.</p>
-            }
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Tracer - Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
 
-          <div class="flex flex-col">
-            <label for="senha">Senha</label>
-            <input
-              [(ngModel)]="senha"
-              #passwordInput
-              id="senha"
-              name="senha"
-              type="senha"
-              placeholder="password"
-              class="w-full rounded-full border border-gray-300 px-4 py-2 shadow-md"
-            />
-            @if(senhaInvalida()){
-            <p class="text-red-500 text-sm mt-2">A senha deve ter mais de 4 caracteres.</p>
-            }
-          </div>
-        </form>
-        @if(loginInvalido()){
-          <p class="text-red-500 text-sm mt-2">Usuário ou senha inválidos. Tente novamente.</p>
-        }
-        <br>
-        <button
-          [disabled]="!onSubmitedOk()"
-          (click)="Login(usuarioInput.value, passwordInput.value)"
-          type="submit"
-          class="bg-green-200 font-bold text-black h-9 rounded-full px-6 shadow-md flex justify-center items-center cursor-pointer"
-        >
-          Entrar
-        </button>
+<body>
+    <section class="page-login">
+        <div class="left">
+            <img src="assets/images/login.jpg" class="login-logo-img" alt="Pack Tracer Logo" />
+        </div>
+        <div class="right">
+            <h1>PACK TRACER</h1>
+            <form class="login-form" [formGroup]="formLogin">
+                <label for="usuario">Username:</label>
+                <input type="text" formControlName="usuario" id="usuario" name="usuario" required />
 
-        <p class="pt-2">
-          <span class="text-sm font-light text-gray-600"> Não tem uma Conta? </span>
+                <label for="senha">Password:</label>
+                <input type="password" formControlName="senha" id="senha" name="senha" required />
 
-          <a href="register" class="underline text-sm font-semibold text-green-600"
-            >Registre-se aqui</a
-          >
-        </p>
-      </div>
+                <button type="submit" (click)="login()">
+                    <mat-icon>login</mat-icon>
+                    Login</button>
+            </form>
+        </div>
     </section>
-  </div>
-</div>
+</body>
+
+</html>
