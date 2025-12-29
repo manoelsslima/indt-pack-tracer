@@ -10,9 +10,9 @@ import { Itens } from './pages/itens/itens';
 import { Historico } from './pages/historico/historico';
 import { Operador } from './pages/cadastros/operador/operador';
 import { Supervisor } from './pages/cadastros/supervisor/supervisor';
-import { Setor } from './pages/cadastros/setor/setor';
 import { Administrador } from './pages/cadastros/administrador/administrador';
 import { Login } from './pages/auth/login/login';
+import { SetorComponent } from './pages/cadastros/setor/setor';
 
 export const routes: Routes = [
   {
@@ -22,12 +22,11 @@ export const routes: Routes = [
       { path: 'home', component: Home},
       {
         path: 'cadastros',
-        component: Admin,
         pathMatch: 'prefix',
         children: [
           { path: 'operador', component: Operador },
           { path: 'supervisor', component: Supervisor },
-          { path: 'setor', component: Setor },
+          { path: 'setor', component: SetorComponent },
           { path: 'administrador', component: Administrador },
 
           { path: 'usuarios', component: Usuarios },

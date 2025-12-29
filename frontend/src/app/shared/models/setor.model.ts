@@ -1,4 +1,4 @@
 export interface Setor {
-    SetorID: number;
-    Nome: string;  
+    id: number;
+    nome: string;
 }

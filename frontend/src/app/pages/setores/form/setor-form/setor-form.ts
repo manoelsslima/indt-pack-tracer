@@ -25,15 +25,15 @@ export class SetorForm {
 
   private formBuilder = inject(FormBuilder);
   setorForm = this.formBuilder.group({
-    setorId: [this.setor?.SetorID],
-    nome: [this.setor?.Nome, Validators.required],
+    setorId: [this.setor?.id],
+    nome: [this.setor?.nome, Validators.required],
   });
 
   onSubmit() {
     if (this.setorForm.valid) {
       const setor1: Setor = {
-        Nome: this.setorForm.value.nome!,
-        SetorID: this.setorForm.value.setorId!,
+        nome: this.setorForm.value.nome!,
+        id: this.setorForm.value.setorId!,
       };
       //const {setorId, nome}
       this.setorService.addSetor(setor1);
