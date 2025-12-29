@@ -21,7 +21,7 @@
   font-style: normal;
   font-weight: 100;
   /* src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v303/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHeej.woff2) format('woff2'); */
-  src: url('/frontend/src/app/assets/fonts/material-symbols-outlined.woff2') format('woff2');
+  src: url('assets/fonts/material-symbols-outlined.woff2') format('woff2');
 }
 
 .material-symbols-outlined {
@@ -37,6 +37,7 @@
   word-wrap: normal;
   direction: ltr;
   -moz-font-feature-settings: 'liga';
+  font-feature-settings: "liga";
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -132,4 +133,21 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #2c3c3c;
+}
+
+.form-cadastro {
+  width: 50%;
+}
+
+.botao-salvar {
+  background-color: #3b82f6;
+  color: #fff;
 }
